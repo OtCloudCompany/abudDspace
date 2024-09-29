@@ -1,0 +1,32 @@
+// Add any global css for the theme here
+
+// imports the base global style
+@import '../../../styles/_global-styles.scss';
+
+:root {
+  --abud-red: #ff0000;
+  --abud-blue: #004884;
+  --abud-light-blue: #005ead;
+  --ds-header-icon-color: var(--abud-blue)
+}
+.btn-primary {
+  background-color: var(--abud-red);
+  border-color: var(--abud-red);
+}
+.bg-abud-light-blue {
+  background-color: var(--abud-light-blue);
+}
+#main-navbar .ds-menu-item {
+  color: var(--abud-blue) !important;
+}
+.dropdown-toggle {
+  color: var(--ds-header-icon-color);
+}
+#overlay-content {
+  position: absolute;
+  bottom: 25px;
+  background: rgba(0, 0, 0, 0.75); /* Black background with 70% opacity */
+  padding: 15px;
+}
+
+

@@ -1,0 +1,21 @@
+<ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
+  <div *ngIf="communitiesRD?.hasSucceeded ">
+    <h2>{{'home.top-level-communities.head' | translate}}</h2>
+    <p class="lead">{{'home.top-level-communities.help' | translate}}</p>
+    <div class="row" *ngIf="communitiesFetched?.length > 0">
+      <div class="col-md-4 my-2" *ngFor="let community of communitiesFetched">
+        <div class="card">
+          <img class="card-img-top" src="/assets/otcloud/images/{{ community.logo }}.webp" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{ community.name }}</h5>
+            <a href="#" class="btn bg-abud-light-blue d-block text-white">
+              View <span class="badge badge-secondary"> {{ community.itemsCount }} </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ds-error *ngIf="communitiesRD?.hasFailed " message="{{'error.top-level-communites' | translate}}"></ds-error>
+  <ds-themed-loading *ngIf="communitiesRD?.isLoading " message="{{'loading.top-level-communities' | translate}}"></ds-themed-loading>
+</ng-container>
