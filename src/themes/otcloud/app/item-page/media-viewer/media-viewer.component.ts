@@ -5,9 +5,7 @@ import {
 
 @Component({
   selector: 'ds-media-viewer',
-  // templateUrl: './media-viewer.component.html',
-  templateUrl: '../../../../../app/item-page/media-viewer/media-viewer.component.html',
-  // styleUrls: ['./media-viewer.component.scss'],
+  templateUrl: './media-viewer.component.html',
   styleUrls: ['../../../../../app/item-page/media-viewer/media-viewer.component.scss'],
 })
 export class MediaViewerComponent extends BaseComponent {
