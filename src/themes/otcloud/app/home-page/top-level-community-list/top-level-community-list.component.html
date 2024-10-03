@@ -5,11 +5,15 @@
     <div class="row" *ngIf="communitiesFetched?.length > 0">
       <div class="col-md-4 my-2" *ngFor="let community of communitiesFetched">
         <div class="card">
-          <img class="card-img-top" src="/assets/otcloud/images/{{ community.logo }}.webp" alt="">
+          <a routerLink="/communities/{{ community.uuid }}">
+            <img class="card-img-top" src="/assets/otcloud/images/{{ community.logo }}.webp" alt="">
+          </a>
           <div class="card-body">
-            <h5 class="card-title">{{ community.name }}</h5>
-            <a href="#" class="btn bg-abud-light-blue d-block text-white">
-              View <span class="badge badge-secondary"> {{ community.itemsCount }} </span>
+            <a routerLink="/communities/{{ community.uuid }}">
+              <h5 class="card-title">{{ community.name }}</h5>
+            </a>
+            <a routerLink="/communities/{{ community.uuid }}" class="btn bg-abud-light-blue d-block text-white justify-content-around">
+              View <span class="badge badge-light text-dark"> {{ community.itemsCount }} items </span>
             </a>
           </div>
         </div>

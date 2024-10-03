@@ -28,5 +28,28 @@
   background: rgba(0, 0, 0, 0.75); /* Black background with 70% opacity */
   padding: 15px;
 }
+footer li{
+  margin-left: 0 !important;
+}
+footer li a:hover {
+  color: #ccc;
+}
+footer li a{
+  color: white;
+  margin-left: 0;
+}
+.footer-pad h4{
+  font-weight: bold;
+}
+.footer-pad .nav-link {
+  padding-left: 0 !important;
+}
+#recent-submissions-link{
+  color: var(--abud-blue) !important;
+}
+#recent-submissions-link:hover{
+  background-color: var(--abud-red) !important;
+  color: white !important;
+}
 
 

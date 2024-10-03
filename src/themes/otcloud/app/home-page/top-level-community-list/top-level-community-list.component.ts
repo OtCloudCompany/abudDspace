@@ -38,14 +38,13 @@ export class TopLevelCommunityListComponent extends BaseComponent implements OnI
             name: community.name,
             uuid: community.uuid,
             logo: `${counter}`,
-            itemsCount: community.archivedItemsCount,
+            itemsCount: community.archivedItemsCount <= 0 ? 0 : community.archivedItemsCount,
           });
           counter++;
         });
         this.cd.detectChanges();
       }
     });
-
   }
 }
 
