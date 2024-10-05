@@ -13,6 +13,9 @@
   background-color: var(--abud-red);
   border-color: var(--abud-red);
 }
+.badge-info {
+  background-color: var(--abud-red) !important;
+}
 .bg-abud-light-blue {
   background-color: var(--abud-light-blue);
 }
@@ -35,7 +38,7 @@ footer li a:hover {
   color: #ccc;
 }
 footer li a{
-  color: white;
+  color: white !important;
   margin-left: 0;
 }
 .footer-pad h4{
@@ -51,7 +54,9 @@ footer li a{
   background-color: var(--abud-red) !important;
   color: white !important;
 }
-
+a {
+  color: var(--abud-blue) !important;
+}
 .item-page-title-field{
   font-size: 1.25rem;
 }
@@ -60,4 +65,10 @@ footer li a{
   padding-left: 6px;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-size: 1.25rem;
+}
+#bibliographicManagers ul li a img {
+  cursor: pointer;
+  max-width: 130px;
+  height: 30px;
 }

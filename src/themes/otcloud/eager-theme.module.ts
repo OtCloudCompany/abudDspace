@@ -58,7 +58,9 @@ import { LogInComponent } from './app/shared/log-in/log-in.component';
 import { BrowseEntryListElementComponent } from './app/shared/object-list/browse-entry-list-element/browse-entry-list-element.component';
 import { PersonComponent } from './app/entity-groups/research-entities/item-pages/person/person.component';
 import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.component';
-import {HomePageModule} from "../../app/home-page/home-page.module";
+import {HomePageModule} from '../../app/home-page/home-page.module';
+import { UsageReportDataService } from 'src/app/core/statistics/usage-report-data.service';
+import {HighchartsChartModule} from "highcharts-angular";
 
 
 /**
@@ -114,10 +116,11 @@ const DECLARATIONS = [
     ItemSharedModule,
     DsoPageModule,
     HomePageModule,
+    HighchartsChartModule,
   ],
   declarations: DECLARATIONS,
   providers: [
-    ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
+    ...ENTRY_COMPONENTS.map((component) => ({provide: component})), UsageReportDataService
   ],
 })
 /**

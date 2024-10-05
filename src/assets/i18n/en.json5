@@ -4,15 +4,15 @@
 
   "401.link.home-page": "Take me to the home page",
 
-  "401.unauthorized": "Unauthorized",
+  "401.unauthorized": "unauthorized",
 
   "403.help": "You don't have permission to access this page. You can use the button below to get back to the home page.",
 
   "403.link.home-page": "Take me to the home page",
 
-  "403.forbidden": "Forbidden",
+  "403.forbidden": "forbidden",
 
-  "500.page-internal-server-error": "Service unavailable",
+  "500.page-internal-server-error": "Service Unavailable",
 
   "500.help": "The server is temporarily unable to service your request due to maintenance downtime or capacity problems. Please try again later.",
 
@@ -22,15 +22,15 @@
 
   "404.link.home-page": "Take me to the home page",
 
-  "404.page-not-found": "Page not found",
+  "404.page-not-found": "page not found",
 
-  "error-page.description.401": "Unauthorized",
+  "error-page.description.401": "unauthorized",
 
-  "error-page.description.403": "Forbidden",
+  "error-page.description.403": "forbidden",
 
-  "error-page.description.500": "Service unavailable",
+  "error-page.description.500": "Service Unavailable",
 
-  "error-page.description.404": "Page not found",
+  "error-page.description.404": "page not found",
 
   "error-page.orcid.generic-error": "An error occurred during login via ORCID. Make sure you have shared your ORCID account email address with DSpace. If the error persists, contact the administrator",
 
@@ -58,7 +58,7 @@
 
   "admin.registries.bitstream-formats.create.failure.head": "Failure",
 
-  "admin.registries.bitstream-formats.create.head": "Create bitstream format",
+  "admin.registries.bitstream-formats.create.head": "Create Bitstream format",
 
   "admin.registries.bitstream-formats.create.new": "Add a new bitstream format",
 
@@ -282,7 +282,7 @@
 
   "admin.access-control.epeople.search.scope.metadata": "Metadata",
 
-  "admin.access-control.epeople.search.scope.email": "Email (exact)",
+  "admin.access-control.epeople.search.scope.email": "E-mail (exact)",
 
   "admin.access-control.epeople.search.button": "Search",
 
@@ -294,7 +294,7 @@
 
   "admin.access-control.epeople.table.name": "Name",
 
-  "admin.access-control.epeople.table.email": "Email (exact)",
+  "admin.access-control.epeople.table.email": "E-mail (exact)",
 
   "admin.access-control.epeople.table.edit": "Edit",
 
@@ -314,9 +314,9 @@
 
   "admin.access-control.epeople.form.lastName": "Last name",
 
-  "admin.access-control.epeople.form.email": "Email",
+  "admin.access-control.epeople.form.email": "E-mail",
 
-  "admin.access-control.epeople.form.emailHint": "Must be a valid email address",
+  "admin.access-control.epeople.form.emailHint": "Must be valid e-mail address",
 
   "admin.access-control.epeople.form.canLogIn": "Can log in",
 
@@ -606,9 +606,9 @@
 
   "admin.metadata-import.page.error.addFile": "Select file first!",
 
-  "admin.metadata-import.page.error.addFileUrl": "Insert file URL first!",
+  "admin.metadata-import.page.error.addFileUrl": "Insert file url first!",
 
-  "admin.batch-import.page.error.addFile": "Select ZIP file first!",
+  "admin.batch-import.page.error.addFile": "Select Zip file first!",
 
   "admin.metadata-import.page.toggle.upload": "Upload",
 
@@ -766,7 +766,7 @@
 
   "bitstream-request-a-copy.name.error": "The name is required",
 
-  "bitstream-request-a-copy.email.label": "Your email address *",
+  "bitstream-request-a-copy.email.label": "Your e-mail address *",
 
   "bitstream-request-a-copy.email.hint": "This email address is used for sending the file.",
 
@@ -1224,9 +1224,9 @@
 
   "community.edit.logo.label": "Community logo",
 
-  "community.edit.logo.notifications.add.error": "Uploading community logo failed. Please verify the content before retrying.",
+  "community.edit.logo.notifications.add.error": "Uploading Community logo failed. Please verify the content before retrying.",
 
-  "community.edit.logo.notifications.add.success": "Upload community logo successful.",
+  "community.edit.logo.notifications.add.success": "Upload Community logo successful.",
 
   "community.edit.logo.notifications.delete.success.title": "Logo deleted",
 
@@ -1234,13 +1234,13 @@
 
   "community.edit.logo.notifications.delete.error.title": "Error deleting logo",
 
-  "community.edit.logo.upload": "Drop a community logo to upload",
+  "community.edit.logo.upload": "Drop a Community Logo to upload",
 
   "community.edit.notifications.success": "Successfully edited the Community",
 
   "community.edit.notifications.unauthorized": "You do not have privileges to make this change",
 
-  "community.edit.notifications.error": "An error occurred while editing the community",
+  "community.edit.notifications.error": "An error occured while editing the Community",
 
   "community.edit.return": "Back",
 
@@ -1300,7 +1300,7 @@
 
   "comcol-role.edit.bitstream_read.name": "Default bitstream read access",
 
-  "comcol-role.edit.bitstream_read.description": "E-People and Groups that can read new bitstreams submitted to this collection. Changes to this role are not retroactive. Existing bitstreams in the system will still be viewable by those who had read access at the time of their addition.",
+  "comcol-role.edit.bitstream_read.description": "Community administrators can create sub-communities or collections, and manage or assign management for those sub-communities or collections. In addition, they decide who can submit items to any sub-collections, edit item metadata (after submission), and add (map) existing items from other collections (subject to authorization).",
 
   "comcol-role.edit.bitstream_read.anonymous-group": "Default read for incoming bitstreams is currently set to Anonymous.",
 
@@ -1448,7 +1448,7 @@
 
   "curation.form.submit.error.head": "Running the curation task failed",
 
-  "curation.form.submit.error.content": "An error occurred when trying to start the curation task.",
+  "curation.form.submit.error.content": "An error occured when trying to start the curation task.",
 
   "curation.form.submit.error.invalid-handle": "Couldn't determine the handle for this object",
 
@@ -1516,7 +1516,7 @@
 
   "dso-selector.set-scope.community.head": "Select a search scope",
 
-  "dso-selector.set-scope.community.button": "Search all of DSpace",
+  "dso-selector.set-scope.community.button": "Search Entire Repository",
 
   "dso-selector.set-scope.community.or-divider": "or",
 
@@ -1640,9 +1640,9 @@
 
   "error.validation.required": "This field is required",
 
-  "error.validation.NotValidEmail": "This is not a valid email",
+  "error.validation.NotValidEmail": "This E-mail is not a valid email",
 
-  "error.validation.emailTaken": "This email is already taken",
+  "error.validation.emailTaken": "This E-mail is already taken",
 
   "error.validation.groupExists": "This group already exists",
 
@@ -1666,7 +1666,7 @@
 
   "file-section.error.header": "Error obtaining files for this item",
 
-  "footer.copyright": "copyright © 2002-{{ year }}",
+  "footer.copyright": "Copyright {{ year }}",
 
   "footer.link.dspace": "DSpace software",
 
@@ -1700,7 +1700,7 @@
 
   "forgot-email.form.error.head": "Error when trying to reset password",
 
-  "forgot-email.form.error.content": "An error occurred when attempting to reset the password for the account associated with the following email address: {{ email }}",
+  "forgot-email.form.error.content": "An error occured when attempting to reset the password for the account associated with the following email address: {{ email }}",
 
   "forgot-password.title": "Forgot Password",
 
@@ -1718,7 +1718,7 @@
 
   "forgot-password.form.label.passwordrepeat": "Retype to confirm",
 
-  "forgot-password.form.error.empty-password": "Please enter a password in the boxes above.",
+  "forgot-password.form.error.empty-password": "Please enter a password in the box below.",
 
   "forgot-password.form.error.matching-passwords": "The passwords do not match.",
 
@@ -1890,7 +1890,7 @@
 
   "home.title": "Home",
 
-  "home.top-level-communities.head": "Communities in DSpace",
+  "home.top-level-communities.head": "Browse Collections",
 
   "home.top-level-communities.help": "Select a community to browse its collections.",
 
@@ -1942,7 +1942,7 @@
 
   "info.feedback.page-label": "Page",
 
-  "info.feedback.page_help": "The page related to your feedback",
+  "info.feedback.page_help": "Tha page related to your feedback",
 
   "item.alerts.private": "This item is non-discoverable",
 
@@ -2486,7 +2486,7 @@
 
   "item.page.relationships.isOrgUnitOfProject": "Research Projects",
 
-  "item.page.subject": "Keywords",
+  "item.page.subject": "Subject(s)",
 
   "item.page.uri": "URI",
 
@@ -2502,7 +2502,7 @@
 
   "item.page.version.create": "Create new version",
 
-  "item.page.version.hasDraft": "A new version cannot be created because there is an in-progress submission in the version history",
+  "item.page.version.hasDraft": "A new version cannot be created because there is an inprogress submission in the version history",
 
   "item.page.claim.button": "Claim",
 
@@ -2614,7 +2614,7 @@
 
   "item.version.history.table.action.deleteVersion": "Delete version",
 
-  "item.version.history.table.action.hasDraft": "A new version cannot be created because there is an in-progress submission in the version history",
+  "item.version.history.table.action.hasDraft": "A new version cannot be created because there is an inprogress submission in the version history",
 
   "item.version.notice": "This is not the latest version of this item. The latest version can be found <a href='{{destination}}'>here</a>.",
 
@@ -2644,7 +2644,7 @@
 
   "item.version.create.notification.failure": "New version has not been created",
 
-  "item.version.create.notification.inProgress": "A new version cannot be created because there is an in-progress submission in the version history",
+  "item.version.create.notification.inProgress": "A new version cannot be created because there is an inprogress submission in the version history",
 
   "item.version.delete.modal.header": "Delete version",
 
@@ -2890,7 +2890,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse Repository",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -2904,7 +2904,7 @@
 
   "menu.section.browse_global_by_title": "By Title",
 
-  "menu.section.browse_global_communities_and_collections": "Communities & Collections",
+  "menu.section.browse_global_communities_and_collections": "Collections",
 
   "menu.section.control_panel": "Control Panel",
 
@@ -3078,13 +3078,13 @@
 
   "mydspace.results.no-title": "No title",
 
-  "mydspace.results.no-uri": "No URI",
+  "mydspace.results.no-uri": "No Uri",
 
-  "mydspace.search-form.placeholder": "Search in MyDSpace...",
+  "mydspace.search-form.placeholder": "Search in mydspace...",
 
   "mydspace.show.workflow": "Workflow tasks",
 
-  "mydspace.show.workspace": "Your submissions",
+  "mydspace.show.workspace": "Your Submissions",
 
   "mydspace.show.supervisedWorkspace": "Supervised items",
 
@@ -3092,7 +3092,7 @@
 
   "mydspace.status.mydspaceValidation": "Validation",
 
-  "mydspace.status.mydspaceWaitingController": "Waiting for reviewer",
+  "mydspace.status.mydspaceWaitingController": "Waiting for controller",
 
   "mydspace.status.mydspaceWorkflow": "Workflow",
 
@@ -3112,7 +3112,7 @@
 
   "nav.expandable-navbar-section-suffix": "(submenu)",
 
-  "nav.browse.header": "All of DSpace",
+  "nav.browse.header": "All of Repository",
 
   "nav.community-browse.header": "By Community",
 
@@ -3122,7 +3122,7 @@
 
   "nav.login": "Log In",
 
-  "nav.user-profile-menu-and-logout": "User profile menu and log out",
+  "nav.user-profile-menu-and-logout": "User profile menu and Log Out",
 
   "nav.logout": "Log Out",
 
@@ -3518,7 +3518,7 @@
 
   "register-page.registration.error.head": "Error when trying to register email",
 
-  "register-page.registration.error.content": "An error occurred when registering the following email address: {{ email }}",
+  "register-page.registration.error.content": "An error occured when registering the following email address: {{ email }}",
 
   "register-page.registration.error.recaptcha": "Error when trying to authenticate with recaptcha",
 
@@ -3580,9 +3580,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title": "DSpace Repository",
+  "repository.title": "Institutional Repository",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "Institutional Repository :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -3918,7 +3918,7 @@
 
   "search.filters.namedresourcetype.Validation": "Validation",
 
-  "search.filters.namedresourcetype.Waiting for Controller": "Waiting for reviewer",
+  "search.filters.namedresourcetype.Waiting for Controller": "Waiting for Controller",
 
   "search.filters.namedresourcetype.Workflow": "Workflow",
 
@@ -3938,7 +3938,7 @@
 
   "search.form.search_dspace": "All repository",
 
-  "search.form.scope.all": "All of DSpace",
+  "search.form.scope.all": "All of Repository",
 
   "search.results.head": "Search Results",
 
@@ -4106,7 +4106,7 @@
 
   "submission.import-external.source.cinii": "CiNii",
 
-  "submission.import-external.source.crossref": "Crossref",
+  "submission.import-external.source.crossref": "CrossRef",
 
   "submission.import-external.source.datacite": "DataCite",
 
@@ -4856,7 +4856,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5367,4 +5367,76 @@
   "process.overview.unknown.user": "Unknown",
 
   "browse.search-form.placeholder": "Search the repository",
+
+  "navbar.home": "Home",
+
+  "navbar.aboutUs": "About Us",
+
+  "navbar.library": "Library",
+
+  "navbar.investigation": "Investigation",
+
+  "navbar.contactUs": "Contact Us",
+
+  "navbar.institutionalRepository": "Institutional Repository",
+
+  "navbar.selfArchiving": "Self Archiving",
+
+  "navbar.staff": "Staff",
+
+  "navbar.regulations": "Regulations",
+
+  "footer.communityList": "Communities",
+
+  "item.page.advisor": "Advisor(s)",
+
+  "item.page.place": "Place of Publication",
+
+  "item.page.extent": "Pagination",
+
+  "item.page.type": "Type",
+
+  "item.page.language": "Language",
+
+  "item.page.citeThisItem": "Cite this Item",
+
+  "item.page.bibliographicManagers": "Bibliographic Managers",
+
+  "item.page.totalViews": "Total Views",
+
+  "item.page.totalDownloads": "Total Downloads",
+
+  "item.page.visitsByMonth": "Visits by Month",
+
+  "item.page.usageStatistics": "Usage Statistics",
+
+  "item.page.topCountries": "Top 10 Countries",
+
+  "item.page.topCities": "Top 10 Cities",
+
+  "item.page.country": "Country",
+
+  "item.page.city": "City",
+
+  "item.page.views": "Views",
+
+  "item.page.selectFormat": "Select Citation Format",
+
+  "customSidebar.author": "Filter by Authors",
+
+  "customSidebar.subject": "Filter by Subject",
+
+  "customSidebar.dateIssued": "Filter by Date Issued",
+
+  "customSidebar.title": "Filter by Title",
+
+  "repository.listelement.badge": "Repository",
+
+  "repository.page.titleprefix": "Repository: ",
+
+  "home.jumbotron.intro-paragraph": "The Institutional Repository strives to provide open access, capture, store, preserve, index and distribute in digital format, the research of the different faculties, departments, research centers and other units dedicated to research at the PUCMM as well as expand the visibility of research through global networks.",
+
+  "search.filters.filter.supportedlanguage.head": "Filters",
+
+  "profile.head": "Update Profile",
 }

@@ -159,6 +159,7 @@ import { RequestCopyModule } from 'src/app/request-copy/request-copy.module';
 import {UserMenuComponent} from './app/shared/auth-nav-menu/user-menu/user-menu.component';
 import { BrowseByComponent } from './app/shared/browse-by/browse-by.component';
 import { RegisterEmailFormComponent } from './app/register-email-form/register-email-form.component';
+import {ModalContentComponent} from "./app/modal-content/modal-content.component";
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -245,6 +246,7 @@ const DECLARATIONS = [
   UserMenuComponent,
   BrowseByComponent,
   RegisterEmailFormComponent,
+  ModalContentComponent,
 ];
 
 @NgModule({

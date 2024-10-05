@@ -15,8 +15,15 @@
 </div>
 <div class="row">
   <div class="col-xs-12 col-md-8">
-    <div id="abstract-field" class="text-justify">
-      <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
+    <div id="abstract-field" class="mb-4">
+      <h2 class="simple-view-element-header"> {{ "item.page.abstract" | translate }}</h2>
+      <ds-truncatable [id]="'abstractWrapper'" [showToggle]="true" >
+        <div class="text-justify">
+          <ds-truncatable-part [id]="'abstractWrapper'" [minLines]="6" [maxLines]="-1">
+            {{ object.firstMetadataValue(['dc.description.abstract']) }}
+          </ds-truncatable-part>
+        </div>
+      </ds-truncatable>
     </div>
 
     <ds-generic-item-page-field [item]="object"
@@ -37,6 +44,87 @@
                             [fields]="['dc.identifier.uri']"
                             [label]="'item.page.uri'">
     </ds-item-page-uri-field>
+
+    <div class="my-4" *ngIf="reportsLoaded">
+      <h4 class="simple-view-element-header">{{ "item.page.usageStatistics" | translate }}</h4>
+      <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li [ngbNavItem]="1" >
+          <a ngbNavLink>{{ "item.page.visitsByMonth" | translate }}</a>
+          <ng-template ngbNavContent>
+            <div class="bg-light p-2">
+              <highcharts-chart
+                [Highcharts]="Highcharts"
+                [options]="chartOptions"
+                style="width: 100%; height: 400px; display: block;">
+              </highcharts-chart>
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2" *ngIf="countriesTableData.length > 0">
+          <a ngbNavLink>{{ "item.page.topCountries" | translate }}</a>
+          <ng-template ngbNavContent>
+            <div id="countriesMapContainer" style="width: 100%;">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="bg-light">
+                  <th>#</th><th>{{ "item.page.country" | translate }}</th>
+                  <th>{{ "item.page.views" | translate }}</th>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let country of countriesTableData; ">
+                    <td>{{ country['indexNum'] }}</td>
+                    <td>{{ country['countryLabel'] }}</td>
+                    <td>{{ country['value'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="bg-light p-2">
+                <highcharts-chart
+                  [Highcharts]="Highcharts"
+                  [constructorType]="'mapChart'"
+                  [options]="mapChartOptions"
+                  style="width: 100%; height: 400px; display: block;">
+                </highcharts-chart>
+              </div>
+
+            </div>
+
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3" *ngIf="cityViews.length > 0">
+          <a ngbNavLink>{{ "item.page.topCities" | translate }}</a>
+          <ng-template ngbNavContent>
+            <div id="citiesMapContainer" style="width: 100%;">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="bg-light">
+                  <th>#</th><th>{{ "item.page.city" | translate }}</th>
+                  <th>{{ "item.page.views" | translate }}</th>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let city of citiesTableData; ">
+                    <td>{{ city['indexNum'] }}</td>
+                    <td>{{ city['cityLabel'] }}</td>
+                    <td>{{ city['value'] }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div><!-- .table-responsive -->
+              <div class="bg-light p-2">
+                <highcharts-chart
+                  [Highcharts]="Highcharts"
+                  [options]="citiesBarGraphOptions"
+                  style="width: 100%; height: 400px; display: block;">
+                </highcharts-chart>
+              </div>
+            </div>
+          </ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav" class="mt-2"></div>
+    </div>
+
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
     <div>
       <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button">
@@ -62,7 +150,73 @@
       </div>
     </div>
 
-    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+    <ul class="list-group my-4" *ngIf="reportsLoaded">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ "item.page.totalViews" | translate }}
+        <span class="sr-only">{{ "item.page.totalViews" | translate }}</span>
+        <span class="badge bg-abud-light-blue badge-pill text-white">{{ totalViews }}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{ "item.page.totalDownloads" | translate }}
+        <span class="sr-only">{{ "item.page.totalDownloads" | translate }}</span>
+        <span class="badge bg-abud-light-blue badge-pill text-white">{{ totalDownloads }}</span>
+      </li>
+    </ul>
+
+    <button class="btn bg-abud-light-blue text-white mb-3 btn-block d-flex justify-content-between align-items-center"
+            *ngIf="citationsLoaded" (click)="modalOpen()">
+      {{ "item.page.citeThisItem" | translate }}
+      <i class="fas fa-book text-white"></i>
+    </button>
+
+    <ul class="list-group mb-4">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="object.hasMetadata(['dc.date.issued'])">
+        {{ 'item.page.date' | translate}}
+        <span class="badge bg-abud-light-blue text-white badge-pill">{{ object.firstMetadataValue(['dc.date.issued']) }}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="object.hasMetadata(['dc.type'])">
+        {{ 'item.page.type' | translate}}
+        <span class="badge bg-abud-light-blue text-white badge-pill">{{ object.firstMetadataValue(['dc.type']) }}</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngIf="object.hasMetadata(['dc.language.iso'])">
+        {{ 'item.page.language' | translate}}
+        <span class="badge bg-abud-light-blue text-white badge-pill">{{ object.firstMetadataValue(['dc.language.iso']) }}</span>
+      </li>
+    </ul>
+
+    <div *ngIf="citationsLoaded" class="card mb-4" id="bibliographicManagers">
+      <div class="card-header">
+        <h5 class="card-title mb-0 text-dark">{{ "item.page.bibliographicManagers" | translate }}</h5>
+      </div>
+      <div class="card-body">
+        <ul class="nav flex-column text-center">
+          <li class="nav-item border my-1">
+            <a class="nav-link"
+               href="http://www.mendeley.com/import/?url={{ handleIdentifier }}"
+               target="_blank">
+              <img src="/assets/otcloud/images/mendeley.svg" alt="Mendeley">
+            </a>
+          </li>
+          <li class="nav-item border my-1">
+            <a class="nav-link" (click)="downloadCitation('endnote')">
+              <img src="/assets/otcloud/images/endnote.png" alt="Endnote">
+            </a>
+          </li>
+          <li class="nav-item border my-1">
+            <a class="nav-link" (click)="downloadCitation('bibtex')">
+              <img src="/assets/otcloud/images/bibtex.png" alt="BibText">
+            </a>
+          </li>
+          <li class="nav-item border my-1">
+            <a class="nav-link" (click)="downloadCitation('csv')">
+              <img src="/assets/otcloud/images/csv.png" alt="BibText">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
     <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
                                             [parentItem]="object"
                                             [itemType]="'Person'"
