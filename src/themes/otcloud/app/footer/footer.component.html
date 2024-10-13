@@ -101,16 +101,20 @@
   </div>
   <div class="row bg-dark border-top-0">
     <div class="col-md-12 text-white">
-      <p class="text-center pt-4"> © Copyright {{ dateStr }} - ABUD </p>
+      <p class="text-center pt-4"> © {{ "footer.copyright" | translate }}, {{ dateStr }} - RI-ABUD </p>
       <ul class="footer-info list-unstyled d-flex justify-content-center mb-0">
 
         <li>
-          <a routerlink="/community-list" class="btn text-white" href="/community-list"> Communities </a>
+          <a routerLink="/community-list" class="btn text-white"> {{ "footer.communityList" | translate }} </a>
         </li>
-        <li><button type="button" class="btn btn-link text-white"> Cookie settings </button></li>
-        <li class="ng-star-inserted"><a routerlink="info/privacy" class="btn text-white" href="/info/privacy">Privacy policy</a></li>
-        <li class="ng-star-inserted"><a routerlink="info/end-user-agreement" class="btn text-white" href="/info/end-user-agreement">End User Agreement</a></li>
-        <li class="ng-star-inserted"><a routerlink="info/feedback" class="btn text-white" href="/info/feedback">Send Feedback</a></li>
+        <li><button type="button" class="btn btn-link text-white"> {{ "footer.link.cookies" | translate }} </button></li>
+        <li class="ng-star-inserted"><a routerLink="info/privacy" class="btn text-white">
+          {{ "footer.link.privacy-policy" | translate }}</a></li>
+        <li class="ng-star-inserted">
+          <a routerLink="info/end-user-agreement" class="btn text-white" >{{ "footer.link.end-user-agreement" | translate}}</a>
+        </li>
+        <li class="ng-star-inserted"><a routerLink="info/feedback" class="btn text-white">
+          {{ "footer.link.feedback" | translate }}</a></li>
       </ul>
     </div>
   </div>

@@ -4,7 +4,7 @@
     <p class="lead">{{'home.top-level-communities.help' | translate}}</p>
     <div class="row" *ngIf="communitiesFetched?.length > 0">
       <div class="col-md-4 my-2" *ngFor="let community of communitiesFetched">
-        <div class="card">
+        <div class="card bg-light">
           <a routerLink="/communities/{{ community.uuid }}">
             <img class="card-img-top" src="/assets/otcloud/images/{{ community.logo }}.webp" alt="">
           </a>
@@ -13,7 +13,8 @@
               <h5 class="card-title">{{ community.name }}</h5>
             </a>
             <a routerLink="/communities/{{ community.uuid }}" class="btn bg-abud-light-blue d-block text-white justify-content-around">
-              View <span class="badge badge-light text-dark"> {{ community.itemsCount }} items </span>
+              {{ "generic.view" | translate }} <span class="badge badge-light text-dark">
+              {{ community.itemsCount }} {{"generic.items" | translate }} </span>
             </a>
           </div>
         </div>

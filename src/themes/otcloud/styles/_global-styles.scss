@@ -9,9 +9,16 @@
   --abud-light-blue: #005ead;
   --ds-header-icon-color: var(--abud-blue)
 }
-.btn-primary {
+.btn-primary:hover  {
+  color: white !important;
+}
+ds-search-filters .btn-primary {
   background-color: var(--abud-red);
   border-color: var(--abud-red);
+  color: white !important;
+}
+.badge-info:hover {
+  color: white !important;
 }
 .badge-info {
   background-color: var(--abud-red) !important;
@@ -71,4 +78,31 @@ a {
   cursor: pointer;
   max-width: 130px;
   height: 30px;
+}
+button.dropdown-toggle > i{
+  color: white !important;
+}
+.btn-secondary {
+  background-color: var(--abud-blue) !important;
+  border: none !important;
+}
+a.btn-secondary i{ color: white !important;}
+btn-outline-primary, .btn-outline-secondary {
+  border-color: var(--abud-red) !important;
+}
+.btn-outline-primary:hover, .btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-primary:focus {
+  color: white !important;
+  border: none !important;
+}
+.btn-primary, .btn-outline-primary:hover,.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-primary:focus{
+  background-color: var(--abud-blue) !important;
+  border-color: var(--abud-blue) !important;
+}
+.facet-filter, .setting-option {
+  border: 1px solid #ccc !important;
+}
+.list-group-item.active {
+  color: white !important;
+  background-color: var(--abud-blue) !important;
+  border-color: var(--abud-blue) !important;
 }
