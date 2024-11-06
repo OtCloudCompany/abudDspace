@@ -97,6 +97,25 @@ btn-outline-primary, .btn-outline-secondary {
 .btn-primary, .btn-outline-primary:hover,.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-primary:focus{
   background-color: var(--abud-blue) !important;
   border-color: var(--abud-blue) !important;
+  color: white !important;
+}
+a.btn-dark i{
+  color: white !important;
+}
+input.border-0{
+  border: 1px solid #ced4da !important;
+  border-radius: 6px !important;
+  padding: 3px !important;
+}
+.nav-item a.bg-info{
+  background-color: var(--abud-light-blue) !important;
+  color: white !important;
+}
+div.sidebar-fixed-element-wrapper, .sidebar-collapsible-element-inner-wrapper{
+  color: wheat !important;
+}
+.sidebar-sub-level-item-list .sidebar-item .ds-menu-item{
+  color: white !important;
 }
 .facet-filter, .setting-option {
   border: 1px solid #ccc !important;
