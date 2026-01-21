@@ -18,7 +18,10 @@ npm-debug.log
 *.ngfactory.ts
 *.css.shim.ts
 *.scss.shim.ts
-
+*.zip
+.github
+.angular
+.vscode
 .DS_Store
 
 webpack.records.json
