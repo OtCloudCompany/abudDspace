@@ -1,0 +1,30 @@
+<div *ngIf="uri && name" class="item-page-field bg-light p-4">
+  <ds-metadata-field-wrapper [label]="'item.page.cc.license.title' | translate">
+    <div [ngClass]="{'row': variant === 'full', 'col': variant === 'small'}">
+      <ul>
+        <li>
+          <a [href]="uri" target="_blank" class="text-pucmm-blue">{{ "item.page.cc.license.name" | translate }}</a>
+        </li>
+      </ul>
+
+      <!-- Wrapper for image and text on the same line -->
+      <div class="d-flex align-items-center">
+        <a [href]="uri" target="_blank" class="link-anchor dont-break-out ds-simple-metadata-link mr-2">
+          <img (error)="showImage = false" [src]="imgSrc" [alt]="name" class="cc-image"
+               [ngStyle]="{
+              'width': 'var(--ds-thumbnail-max-width)',
+              'margin-bottom': variant === 'small' ? '1ch' : '0'
+           }"
+          />
+        </a>
+
+        <!-- Text block -->
+        <span>
+          {{ "item.page.cc.license.disclaimer" | translate }}
+          <a *ngIf="showName || !showImage" [href]="uri" target="_blank" id="cc-name">{{ name }}</a>
+        </span>
+      </div>
+    </div>
+
+  </ds-metadata-field-wrapper>
+</div>

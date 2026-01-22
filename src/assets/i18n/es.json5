@@ -5301,4 +5301,10 @@
   "generic.items": "elementos",
 
   "generic.view": "Vista",
+
+  "item.page.cc.license.title": "El item tiene asodados los siguientes ficheros de licencia: ",
+
+  "item.page.cc.license.name": "Licencia Creative Commons",
+
+  "item.page.cc.license.disclaimer": "Salvo que se indique lo contrario, la licencia de este artículo se describe como",
 }

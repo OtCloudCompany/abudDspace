@@ -61,6 +61,7 @@ import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.compon
 import {HomePageModule} from '../../app/home-page/home-page.module';
 import { UsageReportDataService } from 'src/app/core/statistics/usage-report-data.service';
 import {HighchartsChartModule} from "highcharts-angular";
+import { CcLicenseComponent } from './app/item-page/simple/field-components/cc-license/cc-license.component';
 
 
 /**
@@ -101,7 +102,7 @@ const DECLARATIONS = [
   EditCommunitySelectorComponent,
   EditItemSelectorComponent,
   LogInComponent,
-  LangSwitchComponent,
+  LangSwitchComponent, CcLicenseComponent,
 ];
 
 @NgModule({

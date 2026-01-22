@@ -123,6 +123,9 @@
         </li>
       </ul>
       <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      <div class="mt-4" *ngIf="object.hasMetadata(['dc.rights'])">
+      <ds-cc-license [item]="object"></ds-cc-license>
+    </div>
     </div>
 
     <ds-item-page-collections [item]="object"></ds-item-page-collections>

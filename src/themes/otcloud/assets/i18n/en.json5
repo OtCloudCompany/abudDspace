@@ -38,6 +38,10 @@
   "item.page.views": "Views",
   "item.page.selectFormat": "Select Citation Format",
 
+  "item.page.cc.license.title": "The item has the following license files associated with it: ",
+  "item.page.cc.license.name": "Creative Commons license",
+  "item.page.cc.license.disclaimer": "Except where otherwise noted, this item's license is described as",
+
   "customSidebar.author": "Filter by Authors",
   "customSidebar.subject": "Filter by Subject",
   "customSidebar.dateIssued": "Filter by Date Issued",
