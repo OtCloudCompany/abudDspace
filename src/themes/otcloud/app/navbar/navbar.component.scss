@@ -2,7 +2,7 @@
   --ds-expandable-navbar-height: auto;
 
   nav.navbar {
-    background-color: var(--ds-navbar-bg);
+    // background-color: var(--ds-navbar-bg);
     align-items: center;
   }
 
@@ -10,11 +10,12 @@
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
     .navbar {
       width: 100vw;
-      background-color: var(--bs-white);
+      // background-color: var(--bs-white);
       position: absolute;
       overflow: hidden;
       height: 0;
       z-index: var(--ds-nav-z-index);
+
       &.open {
         height: auto;
         min-height: 100vh; //doesn't matter because wrapper is sticky
@@ -33,21 +34,29 @@
   /* TODO remove when https://github.com/twbs/bootstrap/issues/24726 is fixed */
   .navbar-expand-md.navbar-container {
     @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
-      > .navbar-inner-container {
+      >.navbar-inner-container {
         padding: 0 var(--bs-spacer);
       }
+
       padding: 0;
     }
   }
 
   #main-navbar ::ng-deep {
-    .ds-menu-item, .ds-menu-toggler-wrapper {
+
+    .ds-menu-item,
+    .ds-menu-toggler-wrapper {
       white-space: nowrap;
       text-decoration: none;
     }
 
     .dropdown-menu {
       padding: 0.5rem !important;
+      background-color: var(--abud-light-blue);
+
+      a {
+        color: #fff;
+      }
     }
 
     .ds-menu-item {
@@ -55,9 +64,18 @@
       color: var(--ds-navbar-link-color);
       padding: 0.5rem 0;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: var(--ds-navbar-link-color-hover);
       }
     }
+
+    .toggle-menu-icon {
+      color: #fff;
+    }
+  }
+
+  #main-navbar {
+    padding: 0rem !important;
   }
 }

@@ -7,121 +7,195 @@
   --abud-red: #ff0000;
   --abud-blue: #004884;
   --abud-light-blue: #005ead;
-  --ds-header-icon-color: var(--abud-blue)
+  --ds-header-icon-color: #fff
 }
-.btn-primary:hover  {
+
+.btn-primary:hover {
   color: white !important;
 }
+
 ds-search-filters .btn-primary {
   background-color: var(--abud-red);
   border-color: var(--abud-red);
   color: white !important;
 }
+
 .badge-info:hover {
   color: white !important;
 }
+
 .badge-info {
   background-color: var(--abud-red) !important;
 }
+
 .bg-abud-light-blue {
   background-color: var(--abud-light-blue);
 }
+
 #main-navbar .ds-menu-item {
   color: var(--abud-blue) !important;
 }
+
 .dropdown-toggle {
   color: var(--ds-header-icon-color);
 }
+
+.navbar .dropdown-toggle,
+.navbar .loginLink,
+.navbar .dropdownLogin,
+.navbar .logoutLink,
+.navbar .dropdownLogout {
+  color: #fff !important;
+}
+
+.navbar .dropdown-toggle:hover,
+.navbar .dropdown-toggle:focus,
+.navbar .loginLink:hover,
+.navbar .loginLink:focus,
+.navbar .dropdownLogin:hover,
+.navbar .dropdownLogin:focus,
+.navbar .logoutLink:hover,
+.navbar .logoutLink:focus,
+.navbar .dropdownLogout:hover,
+.navbar .dropdownLogout:focus {
+  color: #fff !important;
+}
+
 #overlay-content {
   position: absolute;
   bottom: 25px;
-  background: rgba(0, 0, 0, 0.75); /* Black background with 70% opacity */
+  background: rgba(0, 0, 0, 0.75);
+  /* Black background with 70% opacity */
   padding: 15px;
 }
-footer li{
+
+footer li {
   margin-left: 0 !important;
 }
+
 footer li a:hover {
   color: #ccc;
 }
-footer li a{
+
+footer li a {
   color: white !important;
   margin-left: 0;
 }
-.footer-pad h4{
+
+.footer-pad h4 {
   font-weight: bold;
 }
+
 .footer-pad .nav-link {
   padding-left: 0 !important;
 }
-#recent-submissions-link{
+
+#recent-submissions-link {
   color: var(--abud-blue) !important;
 }
-#recent-submissions-link:hover{
+
+#recent-submissions-link:hover {
   background-color: var(--abud-red) !important;
   color: white !important;
 }
+
 a {
   color: var(--abud-blue) !important;
 }
-.item-page-title-field{
+
+.item-page-title-field {
   font-size: 1.25rem;
 }
-#abstract-field h2{
+
+#abstract-field h2 {
   background-color: rgba(0, 0, 0, 0.03);
   padding-left: 6px;
   padding-top: 8px;
   padding-bottom: 8px;
   font-size: 1.25rem;
 }
+
 #bibliographicManagers ul li a img {
   cursor: pointer;
   max-width: 130px;
   height: 30px;
 }
-button.dropdown-toggle > i{
+
+button.dropdown-toggle>i {
   color: white !important;
 }
+
 .btn-secondary {
   background-color: var(--abud-blue) !important;
   border: none !important;
 }
-a.btn-secondary i{ color: white !important;}
-btn-outline-primary, .btn-outline-secondary {
+
+a.btn-secondary i {
+  color: white !important;
+}
+
+btn-outline-primary,
+.btn-outline-secondary {
   border-color: var(--abud-red) !important;
 }
-.btn-outline-primary:hover, .btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-primary:focus {
+
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-primary:focus {
   color: white !important;
   border: none !important;
 }
-.btn-primary, .btn-outline-primary:hover,.btn-outline-secondary:hover, .btn-outline-secondary:focus, .btn-outline-primary:focus{
+
+.btn-primary,
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-primary:focus {
   background-color: var(--abud-blue) !important;
   border-color: var(--abud-blue) !important;
   color: white !important;
 }
-a.btn-dark i{
+
+a.btn-dark i {
   color: white !important;
 }
-input.border-0{
+
+input.border-0 {
   border: 1px solid #ced4da !important;
   border-radius: 6px !important;
   padding: 3px !important;
 }
-.nav-item a.bg-info{
+
+.nav-item a.bg-info {
   background-color: var(--abud-light-blue) !important;
   color: white !important;
 }
-div.sidebar-fixed-element-wrapper, .sidebar-collapsible-element-inner-wrapper{
+
+div.sidebar-fixed-element-wrapper,
+.sidebar-collapsible-element-inner-wrapper {
   color: wheat !important;
 }
-.sidebar-sub-level-item-list .sidebar-item .ds-menu-item{
+
+.sidebar-sub-level-item-list .sidebar-item .ds-menu-item {
   color: white !important;
 }
-.facet-filter, .setting-option {
+
+.facet-filter,
+.setting-option {
   border: 1px solid #ccc !important;
 }
+
 .list-group-item.active {
   color: white !important;
   background-color: var(--abud-blue) !important;
   border-color: var(--abud-blue) !important;
+}
+
+#main-navbar .ds-menu-item {
+  color: #fff !important;
+}
+
+.navbar {
+  padding: 0.5rem 0.5rem !important;
 }

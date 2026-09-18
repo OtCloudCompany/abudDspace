@@ -1,7 +1,7 @@
 <nav [ngClass]="{'open': !(menuCollapsed | async)}"
-     [@slideMobileNav]="!(windowService.isXsOrSm() | async) ? 'default' : ((menuCollapsed | async) ? 'collapsed' : 'expanded')"
-     class="navbar navbar-light navbar-expand-md my-2 px-md-0 navbar-container" role="navigation"
-     [attr.aria-label]="'nav.main.description' | translate" id="main-navbar">
+  [@slideMobileNav]="!(windowService.isXsOrSm() | async) ? 'default' : ((menuCollapsed | async) ? 'collapsed' : 'expanded')"
+  class="navbar navbar-light navbar-expand-md px-md-0 navbar-container" role="navigation"
+  [attr.aria-label]="'nav.main.description' | translate" id="main-navbar">
   <!-- TODO remove navbar-container class when https://github.com/twbs/bootstrap/issues/24726 is fixed -->
   <div class="navbar-inner-container w-100" [class.container]="!(isMobile$ | async)">
     <div class="w-100">
