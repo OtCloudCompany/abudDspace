@@ -32,10 +32,6 @@ ds-search-filters .btn-primary {
   background-color: var(--abud-light-blue);
 }
 
-#main-navbar .ds-menu-item {
-  color: var(--abud-blue) !important;
-}
-
 .dropdown-toggle {
   color: var(--ds-header-icon-color);
 }
@@ -103,6 +99,42 @@ a {
   color: var(--abud-blue) !important;
 }
 
+// The rule above forces every link to dark blue, which hides the text of links drawn on a
+// dark/coloured background. Restore white text for those.
+a.btn-primary,
+a.btn-secondary,
+a.btn-success,
+a.btn-danger,
+a.btn-info,
+a.btn-dark,
+a.badge-primary,
+a.badge-secondary,
+a.badge-success,
+a.badge-danger,
+a.badge-info,
+a.badge-dark,
+.dropdown-item.active,
+.dropdown-item:active,
+.nav-pills .nav-link.active {
+  color: #fff !important;
+}
+
+/** Pagination **/
+.page-item.active .page-link {
+  color: #fff !important;
+  background-color: var(--abud-blue);
+  border-color: var(--abud-blue);
+}
+
+.page-item:not(.active):not(.disabled) .page-link:hover,
+.page-item:not(.active):not(.disabled) .page-link:focus {
+  background-color: #e9ecef;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d !important;
+}
+
 .item-page-title-field {
   font-size: 1.25rem;
 }
@@ -134,7 +166,7 @@ a.btn-secondary i {
   color: white !important;
 }
 
-btn-outline-primary,
+.btn-outline-primary,
 .btn-outline-secondary {
   border-color: var(--abud-red) !important;
 }
@@ -198,4 +230,52 @@ div.sidebar-fixed-element-wrapper,
 
 header .navbar {
   padding: 0.5rem 0.5rem !important;
+}
+
+header .header-title {
+  text-align: center;
+}
+
+.home-news-banner {
+  object-fit: cover;
+  min-height: 240px;
+}
+
+/** Small screens **/
+@media screen and (max-width: map-get($grid-breakpoints, md) - 0.02) {
+  // justified text leaves large gaps between words in narrow columns
+  .text-justify {
+    text-align: left !important;
+  }
+
+  header .header-title {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: map-get($grid-breakpoints, sm) - 0.02) {
+  #overlay-content {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto !important;
+    padding: 10px;
+  }
+}
+
+/** Home page community cards **/
+.community-card {
+  overflow: hidden;
+  transition: box-shadow 0.15s ease-in-out;
+
+  .card-img-top {
+    height: auto;
+    aspect-ratio: 876 / 332;
+    object-fit: cover;
+  }
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
 }

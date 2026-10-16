@@ -8,9 +8,13 @@
 
   /** Mobile menu styling **/
   @media screen and (max-width: map-get($grid-breakpoints, md)-0.02) {
+    // Drops down below the header as a full-width panel; the navbar sits inside the
+    // header's .container, so anchor it to the (position: relative) wrapper instead.
     .navbar {
-      width: 100vw;
-      // background-color: var(--bs-white);
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: var(--abud-light-blue);
       position: absolute;
       overflow: hidden;
       height: 0;
@@ -18,8 +22,8 @@
 
       &.open {
         height: auto;
-        min-height: 100vh; //doesn't matter because wrapper is sticky
-        border-bottom: 1px var(--ds-header-navbar-border-bottom-color) solid; // open navbar covers header-navbar-wrapper border
+        align-items: flex-start;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
       }
     }
   }

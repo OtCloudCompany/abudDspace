@@ -1,26 +1,31 @@
 <ng-container *ngVar="(communitiesRD$ | async) as communitiesRD">
-  <div *ngIf="communitiesRD?.hasSucceeded ">
+  <div *ngIf="communitiesRD?.hasSucceeded">
     <h2>{{'home.top-level-communities.head' | translate}}</h2>
     <p class="lead">{{'home.top-level-communities.help' | translate}}</p>
-    <div class="row" *ngIf="communitiesFetched?.length > 0">
-      <div class="col-md-4 my-2" *ngFor="let community of communitiesFetched">
-        <div class="card bg-light">
-          <a routerLink="/communities/{{ community.uuid }}">
-            <img class="card-img-top" src="/assets/otcloud/images/{{ community.logo }}.webp" alt="">
-          </a>
-          <div class="card-body">
-            <a routerLink="/communities/{{ community.uuid }}">
-              <h5 class="card-title">{{ community.name }}</h5>
-            </a>
-            <a routerLink="/communities/{{ community.uuid }}" class="btn bg-abud-light-blue d-block text-white justify-content-around">
-              {{ "generic.view" | translate }} <span class="badge badge-light text-dark">
-              {{ community.itemsCount }} {{"generic.items" | translate }} </span>
-            </a>
+    <ds-pagination [paginationOptions]="config"
+                   [sortOptions]="sortConfig"
+                   [collectionSize]="communitiesRD.payload?.totalElements"
+                   [hideGear]="true"
+                   [hidePaginationDetail]="true"
+                   [hidePagerWhenSinglePage]="true">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4 my-2" *ngFor="let community of (communities$ | async); trackBy: trackByUuid">
+          <div class="card community-card bg-light h-100">
+            <img class="card-img-top" [src]="community.image" alt="" width="876" height="332"
+                 loading="lazy" decoding="async">
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">{{ community.name }}</h3>
+              <a [routerLink]="['/communities', community.uuid]"
+                 class="btn bg-abud-light-blue text-white d-block mt-auto stretched-link">
+                {{ 'generic.view' | translate }} <span class="sr-only">{{ community.name }}</span>
+                <span class="badge badge-light text-dark">{{ community.itemsCount }} {{ 'generic.items' | translate }}</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </ds-pagination>
   </div>
-  <ds-error *ngIf="communitiesRD?.hasFailed " message="{{'error.top-level-communites' | translate}}"></ds-error>
-  <ds-themed-loading *ngIf="communitiesRD?.isLoading " message="{{'loading.top-level-communities' | translate}}"></ds-themed-loading>
+  <ds-error *ngIf="communitiesRD?.hasFailed" message="{{'error.top-level-communites' | translate}}"></ds-error>
+  <ds-themed-loading *ngIf="communitiesRD?.isLoading" message="{{'loading.top-level-communities' | translate}}"></ds-themed-loading>
 </ng-container>

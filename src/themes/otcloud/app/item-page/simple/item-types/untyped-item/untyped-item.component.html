@@ -195,24 +195,24 @@
         <ul class="nav flex-column text-center">
           <li class="nav-item border my-1">
             <a class="nav-link"
-               href="http://www.mendeley.com/import/?url={{ handleIdentifier }}"
-               target="_blank">
-              <img src="/assets/otcloud/images/mendeley.svg" alt="Mendeley">
+               href="https://www.mendeley.com/import/?url={{ handleIdentifier }}"
+               target="_blank" rel="noopener noreferrer">
+              <img src="/assets/otcloud/images/mendeley.svg" alt="Mendeley" loading="lazy">
             </a>
           </li>
           <li class="nav-item border my-1">
             <a class="nav-link" (click)="downloadCitation('endnote')">
-              <img src="/assets/otcloud/images/endnote.png" alt="Endnote">
+              <img src="/assets/otcloud/images/endnote.png" alt="EndNote" loading="lazy">
             </a>
           </li>
           <li class="nav-item border my-1">
             <a class="nav-link" (click)="downloadCitation('bibtex')">
-              <img src="/assets/otcloud/images/bibtex.png" alt="BibText">
+              <img src="/assets/otcloud/images/bibtex.png" alt="BibTeX" loading="lazy">
             </a>
           </li>
           <li class="nav-item border my-1">
             <a class="nav-link" (click)="downloadCitation('csv')">
-              <img src="/assets/otcloud/images/csv.png" alt="BibText">
+              <img src="/assets/otcloud/images/csv.png" alt="CSV" loading="lazy">
             </a>
           </li>
         </ul>

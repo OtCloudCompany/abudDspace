@@ -1,8 +1,12 @@
 <div class="container">
   <div class="card mb-3 bg-light">
     <div class="row no-gutters">
-      <div class="col-md-7 position-relative">
-        <img src="/assets/otcloud/images/abud-banner.png" alt="background-image" class="w-100 h-100">
+      <div class="col-lg-7 position-relative">
+        <img src="/assets/otcloud/images/abud-banner.webp"
+             srcset="/assets/otcloud/images/abud-banner-800.webp 800w, /assets/otcloud/images/abud-banner.webp 1382w"
+             sizes="(min-width: 1200px) 665px, (min-width: 992px) 565px, 100vw"
+             width="1382" height="433" alt="" fetchpriority="high" decoding="async"
+             class="home-news-banner w-100 h-100">
         <div class="card-img-overlay d-flex justify-content-center">
           <div class="w-75 mx-auto" id="overlay-content">
             <h5 class="card-title text-white">{{ "home.searchRepository" | translate }}</h5>
@@ -14,7 +18,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-lg-5">
         <div class="card-body">
           <h5 class="card-title font-weight-bold bg-abud-light-blue text-white p-2 justify-content-end">
             <i class="fas fa-archive"></i> &nbsp; {{ "repository.name" | translate }}
@@ -23,7 +27,8 @@
           <p class="card-text justify-content-center">
             <small class="text-muted">
               <a id="recent-submissions-link" class="btn btn-light btn-outline-danger"
-                 href="/search?spc.page=1&spc.sf=dc.date.accessioned&spc.sd=DESC">
+                 routerLink="/search"
+                 [queryParams]="{ 'spc.page': 1, 'spc.sf': 'dc.date.accessioned', 'spc.sd': 'DESC' }">
                 {{ "home.recentSubmissions" | translate }}
               </a>
             </small>
